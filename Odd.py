@@ -11,10 +11,6 @@ def url_int(url):
 
     matches_int={}
 
-    #match[0]/odd[0] Home team
-    #match[1]/odd[1] X
-    #match[2]/odd[2] Away team
-
     for url in body_int_today.find_all("tr",class_="b n3x"):
         match=url.find_all("span")
         
