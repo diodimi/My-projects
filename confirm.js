@@ -6,7 +6,7 @@ function myFunction() {
 }
 
 
-document.getElementById("newname").innerhtml=name;
-document.getElementById("newphone").innerhtml=tel;
-document.getElementById("newquestion").innerhtml=question;
-document.getElementById("newemail").innerhtml=email;
+document.getElementById("newname").innerHTML=name;
+document.getElementById("newphone").innerHTML=tel;
+document.getElementById("newquestion").innerHTML=question;
+document.getElementById("newemail").innerHTML=email;
