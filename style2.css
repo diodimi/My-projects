@@ -1,0 +1,33 @@
+fieldset { 
+    background-color:white;
+	display: block;
+    margin:auto;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 33px groove (internal value);
+	font-size:150%;
+}
+#h1{
+	
+	color:white;
+	font-size:200%;
+}
+#color{
+	background-color:#152552;
+}
+input{
+	font-size:100%;
+	margin:auto;
+	
+}
+textarea{ 
+	font-size:300%;
+}
+.button{
+	font-size:80%;
+}
+#letters{
+	font-size:80%;
+}

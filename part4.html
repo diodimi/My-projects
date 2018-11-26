@@ -1,0 +1,41 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Επικοινωνία</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style_part4.css">
+
+</head>
+<body>
+	<form id="frm1">
+		<div id="color">
+		<spam id="h1"> Φόρμα επικοινωνίας </spam>
+		<br>
+		<fieldset>
+		<table>
+		<tr>
+		<td >
+		<b>Ονοματεπώνυμο*</b>
+		</td><td>
+		<input type="text" name="name" id="name"required>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<b>Τηλέφωνο</b></td><td>
+		<input type="text" name="tel" id="tel"></td><tr><td>
+		<b>Email*</b></td><td><input type="email" name="email" id="email" required></td><tr>
+		<td>
+		<b>Ερώτημα*</b></td><td><textarea name="question" id="question"required></textarea></td></tr>
+		</table>
+		<br>
+		<input type="submit" class="button" onclick="myFunction()">
+		<input type="reset" class="button"value="Reset">
+		<br><br>
+		<spam id="letters">Tα πεδια με * είναι υποχρεωτικά<spam>
+		</fieldset>
+
+	</form>
+	<script src="confirm.js"></script>
+	</div>
+</body>

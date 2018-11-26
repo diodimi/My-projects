@@ -1,0 +1,50 @@
+#b1{ 
+	background-image:url("crime.jpg");
+	}
+#b2{
+	background-image:url("sweden.jpg");
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+h1{	
+	text-align:center;
+	color:#d8a503;
+	font-size:650%;
+	font-family:fantasy;
+}
+table,td{
+	border:1px solid black;
+	border-collapse:collapse;
+	background-color:#d8a503;
+		
+}
+table{
+	width:30%;
+}
+td{
+	font-size:300%;
+	text-align:center;
+	padding:20px;
+	font-family:fantasy;
+}
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+a:link {
+    color: black;   
+    text-decoration: none;
+}
+#div1{
+	background-color:black;
+	color:white;
+	font-size:190%;
+}
+#img1{
+	float:left;
+	display: block;
+	margin: 5 auto;	
+}
+
+	
+	

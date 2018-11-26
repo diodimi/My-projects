@@ -1,0 +1,30 @@
+.title{
+	color:yellow;
+	font-size:250%;
+}
+.info{
+	color:purple;
+	font-size:140%;
+}
+.book-title{
+	color:black;
+	
+}
+body{
+	background-color:#2a7bdd;
+}
+.button{
+	font-size:150%;
+}
+.payment{
+	background-color:white;
+	font-size:120%;
+}
+.text{
+	position:absolute;
+	font-size:100%;
+	color:#D8DEE1;
+}
+.radio_pay{
+	position:absolute;
+}
