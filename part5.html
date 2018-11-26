@@ -1,0 +1,80 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Aγορά βιβλίου</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style_part5.css">
+</head>
+<body>
+	<form>
+		
+		
+		<fieldset>
+		<br>	
+		<h3 class="title"><u>Αγορά βιβλίων</u></h3><br>
+		<b class="info">Στοιχεία παραγγελίας</b><br>
+		Ημερομηνία: <input type="date" name="callendar"class="callendar"><br>
+		<b class="info">Αριθμός τίτλων:</b>
+		<select name="book-title" class="book-title">
+			<option value="book1">Η παγωμένη πριγκίπισσα</option>
+			<option value="book2">Ο ιεροκήρυκας</option>
+			<option value="book3">Οικογενειακά μυστικά</option>
+			<option value="book4">Σε ζωντανή μετάδοση</option>
+			<option value="book1">Χιονοθύελλα με άρωμα πικραμύγδαλου</option>
+			<option value="book2">Το παιδί από τη Γερμανία</option>
+			<option value="book3">Άγγελος θανάτoυ</option>
+			<option value="book4">O θηριοδαμαστής</option>
+			</select>
+		<b class="info">Αριθμός αντίτπων τίτλων:</b><input type="text" name="num"class="num"><br>
+		<div class="payment">
+		<form>
+			<input type="radio"name="payment" class="pay" checked><img src="payment.jpg" width="220" height="70"><br>
+			Card number<br><input type="text" name="pay"class="payment" value="">
+		<table>
+			<tr>
+			<td>Expire date</td> 
+			<td>Security code</td>
+			</tr>
+			<tr>
+			<td>
+			<input type="text" name="pay"class="payment" value="MM / YY">
+			</td>
+			<td>
+			<input type="text" name="pay"class="payment" value="">
+			</td>
+			</tr>
+			<tr>
+			<td colspan="2">
+			Cardholder name
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<input type="text" name="pay"class="payment" value="'Ονομα">
+			</td>
+			<td>
+			<input type="text" name="pay"class="payment" value="Eπίθετο">
+			</td>
+			</tr>
+			<input type="text" name="pay"class="payment" value="">
+		</table>
+		<input type="checkbox" name="pay">Save this card<br>
+		<input type="radio" name="radio_pay">WebMoney<img src="webmoney.jpg" width="100" height="40"><br>
+		<input type="radio" name="radio_pay">Other payment methods<br><br>
+		
+		
+		<input type="reset" class="button_pay"value="Done">
+		<input class="button_pay"type="submit" value="Cancel">
+
+		</div>
+		</form>
+		<input type="reset" class="button"value="Καθαρισμός πεδίων">
+		<input class="button"type="submit" value="Αποστολή στοιχείων">
+			
+		<br><br>
+		
+		</fieldset>
+	</form>	
+	
+	
+</body>
