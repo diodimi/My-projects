@@ -1,3 +1,4 @@
+
 function myFunction() {
     var name=document.getElementById("name").value;
     var tel=document.getElementById("tel").value;
@@ -9,8 +10,7 @@ function myFunction() {
 
 
 }
-
-document.getElementById("newname").innerHTML=nn;
+document.getElementById("newname").innerHTML="sa";
 document.getElementById("newphone").innerHTML=tel;
 document.getElementById("newquestion").innerHTML=question;
 document.getElementById("newemail").innerHTML=email;
