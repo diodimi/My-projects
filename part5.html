@@ -15,18 +15,15 @@
 		<b class="info">Στοιχεία παραγγελίας</b><br>
 		Ημερομηνία: <input type="date" name="callendar" id= "callendar"class="callendar"><br>
 		<b class="info">Αριθμός τίτλων:</b>
-		<select name="book-title" class="book-title" required>
+		<select name="book-title" class="book-title" id="select" required>
 			<option >None</option>
-			<option value="book1">Η παγωμένη πριγκίπισσα</option>
-			<option value="book2">Ο ιεροκήρυκας</option>
-			<option value="book3">Οικογενειακά μυστικά</option>
-			<option value="book4">Σε ζωντανή μετάδοση</option>
-			<option value="book1">Χιονοθύελλα με άρωμα πικραμύγδαλου</option>
-			<option value="book2">Το παιδί από τη Γερμανία</option>
-			<option value="book3">Άγγελος θανάτoυ</option>
-			<option value="book4">O θηριοδαμαστής</option>
+			<option value="book1" id="b1">Η παγωμένη πριγκίπισσα</option>
+			<option value="book2" id="b2">Ο ιεροκήρυκας</option>
+			<option value="book3" id="b3">Οικογενειακά μυστικά</option>
+			<option value="book4" id="b4">Σε ζωντανή μετάδοση</option>
+			
 			</select>
-		<b class="info">Αριθμός αντίτπων τίτλων:</b><input type="text" name="num"class="num" required><br>
+		<b class="info">Αριθμός αντίτπων τίτλων:</b><input type="text" name="num"class="num" id="num" required><br>
 		<div class="payment">
 		<form>
 			<input type="radio"name="payment" class="pay" checked><img src="payment.jpg" width="220" height="70"><br>
@@ -51,10 +48,11 @@
 			</tr>
 			<tr>
 			<td>
-			<input type="text" name="pay"class="payment" value="'Ονομα">
+			
+			<input type="text" name="pay"class="payment" value="'Ονομα" id="onoma">
 			</td>
 			<td>
-			<input type="text" name="pay"class="payment" value="Eπίθετο">
+			<input type="text" name="pay"class="payment" value="Eπίθετο" id="epitheto">
 			</td>
 			</tr>
 			<input type="text" name="pay"class="payment" value="">
@@ -70,7 +68,7 @@
 		</div>
 		</form>
 		<input type="reset" class="button"value="Καθαρισμός πεδίων">
-		<input class="button"type="submit" value="Αποστολή στοιχείων" onclick(send())>
+		<input class="button"type="submit" value="Αποστολή στοιχείων" onclick="send()">
 			
 		<br><br>
 		
@@ -84,16 +82,44 @@
         var iKeyCode = (evt.which) ? evt.which : evt.keyCode
         if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
             return false;
-
         return true;
     }    
-	var code=document.getElementById("code");
-	var flag=0;
-	if(code>99 && code<1000)
-		flag=1;
+	
 	function send(){
-		alert(flag);
+		var code=document.getElementById("code").value;
+		
+		
+		if(code>99 && code<1000 ){
+			
+			var num=document.getElementById("num").value;
+			var select=document.getElementById("select").value;
+			
+			if(select=="book1"){
+				var price=12*num;
+				alert("Η παγωμένη πριγκίπισσα=12* "+num+"="+price+"$");
+			}
+			else if(select=="book2"){
+				var price=15*num;
+				alert("Ο ιεροκήρυκας=15* "+num+"="+price+"$");
+			
+			}
+			else if(select=="book3"){
+				var price=14*num;
+				alert("Οικογενειακά μυστικά=14* "+num+"="+price+"$");
+				
+			}
+			else if(select=="book4"){
+				var price=13*num;
+				alert("Σε ζωντανή μετάδοση=13* "+num+"="+price+"$");
+				
+			}
+			}
+		else{
+			alert("Security code must be 3 digits");
+			}
 	}	
+	
+	
 	</script>
 		
 </body>
