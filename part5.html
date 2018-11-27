@@ -6,16 +6,17 @@
 	<link rel="stylesheet" href="style_part5.css">
 </head>
 <body>
-	<form>
+	
 		
 		
 		<fieldset>
 		<br>	
 		<h3 class="title"><u>Αγορά βιβλίων</u></h3><br>
 		<b class="info">Στοιχεία παραγγελίας</b><br>
-		Ημερομηνία: <input type="date" name="callendar"class="callendar"><br>
+		Ημερομηνία: <input type="date" name="callendar" id= "callendar"class="callendar"><br>
 		<b class="info">Αριθμός τίτλων:</b>
-		<select name="book-title" class="book-title">
+		<select name="book-title" class="book-title" required>
+			<option >None</option>
 			<option value="book1">Η παγωμένη πριγκίπισσα</option>
 			<option value="book2">Ο ιεροκήρυκας</option>
 			<option value="book3">Οικογενειακά μυστικά</option>
@@ -25,11 +26,11 @@
 			<option value="book3">Άγγελος θανάτoυ</option>
 			<option value="book4">O θηριοδαμαστής</option>
 			</select>
-		<b class="info">Αριθμός αντίτπων τίτλων:</b><input type="text" name="num"class="num"><br>
+		<b class="info">Αριθμός αντίτπων τίτλων:</b><input type="text" name="num"class="num" required><br>
 		<div class="payment">
 		<form>
 			<input type="radio"name="payment" class="pay" checked><img src="payment.jpg" width="220" height="70"><br>
-			Card number<br><input type="text" name="pay"class="payment" value="">
+			Card number<br><input type="text" name="pay"class="payment" value="" onkeypress="javascript:return isNumber(event)">
 		<table>
 			<tr>
 			<td>Expire date</td> 
@@ -40,7 +41,7 @@
 			<input type="text" name="pay"class="payment" value="MM / YY">
 			</td>
 			<td>
-			<input type="text" name="pay"class="payment" value="">
+			<input type="text" name="pay"class="payment" value="" id="code" onkeypress="javascript:return isNumber(event)">
 			</td>
 			</tr>
 			<tr>
@@ -69,12 +70,31 @@
 		</div>
 		</form>
 		<input type="reset" class="button"value="Καθαρισμός πεδίων">
-		<input class="button"type="submit" value="Αποστολή στοιχείων">
+		<input class="button"type="submit" value="Αποστολή στοιχείων" onclick(send())>
 			
 		<br><br>
 		
 		</fieldset>
-	</form>	
 	
-	
+	<script>
+		var d = new Date();
+		
+		document.getElementById("callendar").value = d;
+		 function isNumber(evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+
+        return true;
+    }    
+	var code=document.getElementById("code");
+	var flag=0;
+	if(code>99 && code<1000)
+		flag=1;
+	function send(){
+		alert(flag);
+	}	
+	</script>
+		
 </body>
+</html>
